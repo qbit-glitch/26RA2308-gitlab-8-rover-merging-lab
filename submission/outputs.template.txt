@@ -1,0 +1,91 @@
+##############################################################################
+#  ROVER MERGING LAB  -  SUBMISSION FILE
+#
+#  1. Copy this file:    cp submission/outputs.template.txt submission/outputs.txt
+#  2. Do the tasks in ASSIGNMENT.md, in order.
+#  3. After each command, paste what the terminal printed UNDER the matching
+#     "--- N.M" line, replacing the line "(paste output here)".
+#  4. Do not edit or delete the "=== TASK" and "--- N.M" lines.
+#  5. Check your work at any time:    python3 tests/grade.py
+##############################################################################
+
+Name   :
+Reg No :
+
+
+=== TASK 1 : Take over the release board  (10 marks) ===
+
+--- 1.1  git config --local --list ---
+(paste output here)
+
+--- 1.2  git branch -a ---
+(paste output here)
+
+--- 1.3  git tree ---
+(paste output here)
+
+# Q1 (type the answer on the ANSWER-1 line below): how many feature branches are waiting to be merged into main?
+ANSWER-1 :
+
+
+=== TASK 2 : Fast-forward  (15 marks) ===
+
+--- 2.1  git log --oneline main..origin/feature/turn-left ---
+(paste output here)
+
+--- 2.2  git merge origin/feature/turn-left ---
+(paste output here)
+
+--- 2.3  git tree ---
+(paste output here)
+
+
+=== TASK 3 : A real merge  (20 marks) ===
+
+--- 3.1  git merge origin/feature/fast-loop -m "merge: bring in fast sensor loop" ---
+(paste output here)
+
+--- 3.2  git tree ---
+(paste output here)
+
+--- 3.3  git cat-file -p HEAD ---
+(paste output here)
+
+# Q2 (type the answer on the ANSWER-2 line below): the SHA of the SECOND parent of this merge commit   (at least 7 characters)
+ANSWER-2 :
+
+
+=== TASK 4 : A merge conflict  (40 marks) ===
+
+--- 4.1  git merge origin/fix/echo-timeout   (it is supposed to stop with a conflict) ---
+(paste output here)
+
+--- 4.2  git status ---
+(paste output here)
+
+--- 4.3  cat src/sensor_limits.h ---
+(paste output here)
+
+--- 4.4  python3 tests/check_limits.py   (after you fixed the file in nano) ---
+(paste output here)
+
+--- 4.5  git commit -m "merge: settle echo timeout at 30 ms" ---
+(paste output here)
+
+--- 4.6  git tree ---
+(paste output here)
+
+
+=== TASK 5 : Wrap up  (15 marks) ===
+
+--- 5.1  git branch -r --merged ---
+(paste output here)
+
+--- 5.2  git log --oneline --merges ---
+(paste output here)
+
+--- 5.3  git status ---
+(paste output here)
+
+# Q3 (type the answer on the ANSWER-3 line below): by how many commits is main now ahead of origin/main?
+ANSWER-3 :
